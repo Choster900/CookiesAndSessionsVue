@@ -13,8 +13,38 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    component: () => import(/* webpackChunkName: "AboutView" */ '../views/AboutView.vue')
+  },
+  {
+    path: '/users',
+    name: 'users',
+    component: () => import(/* webpackChunkName: "Users" */ '../views/Users.vue')
+  },
+  {
+    path: '/counter',
+    name: 'counter',
+    component: () => import(/* webpackChunkName: "Counter" */ '../views/Counter.vue')
+  },
+  {
+    path: '/pokemon-search',
+    name: 'pokemon-search',
+    component: () => import(/* webpackChunkName: "SearchPokemon" */ '../views/SearchPokemon.vue')
+  },
+  {
+    path: '/pokemon/:id',
+    name: 'pokemon-id',
+    component: () => import(/* webpackChunkName: "Pokemon" */ '../views/Pokemon.vue')
+  },
+  {
+    path: '/todo',
+    name: 'todo',
+    component: () => import(/* webpackChunkName: "TodoVuex" */ '../views/TodoVuex.vue')
+  },
+  {
+    path: '/slots',
+    name: 'slots',
+    component: () => import(/* webpackChunkName: "TodoVuex" */ '../views/CustomSlots.vue')
+  },
 ]
 
 const router = createRouter({

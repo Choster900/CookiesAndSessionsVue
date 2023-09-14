@@ -1,18 +1,26 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Reactive vs Ref</h1>
+    {{ iroman }}
+    {{ hulk }}
   </div>
 </template>
 
 <script>
+import { ref } from 'vue'
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld
+  setup() {
+    const iroman = ref({ name: 'tony', age: '50' })
+    const hulk = ref({ name: 'Bruce', age: '50' })
+
+    return{
+      iroman,
+      hulk
+    }
   }
 }
 </script>
